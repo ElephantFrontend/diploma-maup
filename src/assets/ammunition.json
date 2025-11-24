@@ -1,0 +1,12 @@
+//TODO: Need to made DB from ukrarmor site
+[
+  {
+    "name": 'Керамічні плити 6 класу (комплект). Вага 5.6 кг. Розмір M (25х30 см.)',
+    "code": 'US.163.0007',
+    "category": 'armorPlates',
+    "classification": 'firearms',
+    "price": 12.390,
+    "img": 'https://ukrarmor.com.ua/storage/products/images/big/8V0DbQtkrdiZJx6jqnaIAXhM7zVue0VfvmLiDmKh.jpg.webp?v=1757940976',
+    "link": 'https://ukrarmor.com.ua/catalog/keramicni-pliti-6-klasu-vaga-56-kg-rozmir-m-25x30-sm/p23'
+  }
+]

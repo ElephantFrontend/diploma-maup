@@ -1,0 +1,13 @@
+.step-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-content label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+    font-size: 16px;
+}
+

@@ -1,0 +1,92 @@
+.stepper-container {
+    max-width: 500px;
+    margin: 40px auto;
+    text-align: center;
+    font-family: sans-serif;
+    border: 1px solid #ddd;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.steps::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #242424;
+    z-index: 0;
+}
+
+.step {
+    position: relative;
+    z-index: 1;
+}
+
+.circle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #242424;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.step.active .circle {
+    background-color: #007bff;
+}
+
+.step.completed .circle {
+    background-color: #28a745;
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.step-content {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.step-content input {
+    display: block;
+    margin: 0 5px 0 0;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #242424;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    outline: none;
+}
+
+.buttons button:hover:not(:disabled) {
+    background-color: #475467;
+}
+
+.buttons button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
