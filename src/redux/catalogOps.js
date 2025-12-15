@@ -1,14 +1,28 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/';
+// axios.defaults.baseURL = 'https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/';
+//
+// export const fetchCatalog = createAsyncThunk(
+//     'catalog/fetchAll',
+//     async (_, thunkAPI) => {
+//         try {
+//             const response = await axios.get('/campers');
+//             return response.data.items;
+//         } catch (e) {
+//             return thunkAPI.rejectWithValue(e.message);
+//         }
+//     }
+// );
+
+axios.defaults.baseURL = 'http://localhost:3000/api/';
 
 export const fetchCatalog = createAsyncThunk(
     'catalog/fetchAll',
     async (_, thunkAPI) => {
         try {
-            const response = await axios.get('/campers');
-            return response.data.items;
+            const response = await axios.get('/ammunition');
+            return response.data;
         } catch (e) {
             return thunkAPI.rejectWithValue(e.message);
         }

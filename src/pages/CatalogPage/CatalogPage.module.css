@@ -4,8 +4,31 @@
 }
 
 .catalog-page--products {
-    display: flex;
-    /*flex-direction: column;*/
-    flex-wrap: wrap;
+    display: grid;
     gap: 32px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .catalog-page--products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .catalog-page--products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .catalog-page--products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1821px) {
+    .catalog-page--products {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }

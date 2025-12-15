@@ -44,23 +44,25 @@ export const selectLoading = state => state.catalog.loading;
 export const selectFilteredCatalog = createSelector(
     [selectCatalog, selectFilters],
     (catalog, filters) => {
-        return catalog.filter(product => {
-            const matchLocation =
-                !filters.location ||
-                product.location.toLowerCase().includes(filters.location.toLowerCase());
-
-            const matchType = !filters.type || product.form === filters.type;
-
-            const matchEquipment =
-                filters.equipment.length === 0 ||
-                filters.equipment.every(eq => {
-                    const { key, expected } = equipmentMap[eq] || {};
-                    if (!key) return false;
-                    return product[key] === expected;
-                });
-
-            return matchLocation && matchType && matchEquipment;
-        });
+        console.log('catalog', catalog);
+        return catalog;
+        // return catalog.filter(product => {
+        //     const matchLocation =
+        //         !filters.location ||
+        //         product.location.toLowerCase().includes(filters.location.toLowerCase());
+        //
+        //     const matchType = !filters.type || product.form === filters.type;
+        //
+        //     const matchEquipment =
+        //         filters.equipment.length === 0 ||
+        //         filters.equipment.every(eq => {
+        //             const { key, expected } = equipmentMap[eq] || {};
+        //             if (!key) return false;
+        //             return product[key] === expected;
+        //         });
+        //
+        //     return matchLocation && matchType && matchEquipment;
+        // });
     }
 );
 

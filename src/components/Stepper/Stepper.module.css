@@ -1,4 +1,6 @@
 .stepper-container {
+    display: flex;
+    flex-direction: column;
     max-width: 500px;
     margin: 40px auto;
     text-align: center;

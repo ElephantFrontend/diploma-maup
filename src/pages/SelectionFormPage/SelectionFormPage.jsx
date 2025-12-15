@@ -1,18 +1,14 @@
 import css from "./SelectionFormPage.module.css"
 import React, { useState } from "react";
 import Stepper from "../../components/Stepper/Stepper.jsx";
-import {useNavigate} from "react-router";
-
 
 function SelectionFormPage({onSubmit}) {
     const [activeStep, setActiveStep] = useState(0);
     const handleStepChange = (step) => {
-        console.log("Зміна кроку:", step);
         setActiveStep(step);
     };
 
     const handleOnSubmit = () => {
-        console.log("FINISH:", data);
         onSubmit(data);
     }
     const [data, setData] = useState({

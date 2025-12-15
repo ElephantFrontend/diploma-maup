@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 100;
 
 const paginationSlice = createSlice({
     name: 'pagination',

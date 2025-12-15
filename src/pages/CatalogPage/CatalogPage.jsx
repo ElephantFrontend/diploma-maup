@@ -21,7 +21,7 @@ function CatalogPage () {
     return (
         <>
             <div className={css['catalog-page']}>
-                <CatalogSidebar></CatalogSidebar>
+                {/*<CatalogSidebar></CatalogSidebar>*/}
 
                 {loading ? (
                     <Loading />

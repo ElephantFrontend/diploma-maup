@@ -1,13 +1,6 @@
 import React, { useState, useEffect } from "react";
 import css from "./Stepper.module.css"
 
-/**
- * Глобальний компонент Stepper
- *
- * @param {Array} steps - [{ label: string, content: JSX }]
- * @param {number} activeStep - (опціонально) зовнішній індекс поточного кроку
- * @param {Function} onStepChange - (опціонально) колбек при зміні кроку
- */
 function Stepper({ steps = [], activeStep, data, onStepChange, onSubmit }) {
     const [internalStep, setInternalStep] = useState(0);
     const isControlled = typeof activeStep === "number";

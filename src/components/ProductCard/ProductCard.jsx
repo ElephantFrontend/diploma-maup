@@ -19,18 +19,18 @@ function ProductCard ({product}) {
         <>
             <div className={css['product-card']}>
                 <div className={css['product-card-img']}>
-                    <img src={product.gallery[0].thumb} alt={product.description}/>
+                    <img src={product.img} alt={product.name}/>
                 </div>
 
                 <div className={css['product-card-details']}>
-                    <div className={css['product-card-header']}>
+                    {/*<div className={css['product-card-header']}>*/}
                         <h3 className={css['product-card-name']}>{product.name}</h3>
 
-                        <div className={css['product-card-actions']}>
-                            <p className={css['product-card-price']}>&euro;{product.price}</p>
+                        {/*<div className={css['product-card-actions']}>*/}
+                            {/*<p className={css['product-card-price']}>&euro;{product.email}</p>*/}
                             {/*<Heart onClick={toggleHandler} className={`${css['product-card-favorites']} ${isFavorite ? css['is-favorites'] : ''}`}></Heart>*/}
-                        </div>
-                    </div>
+                        {/*</div>*/}
+                    {/*</div>*/}
 
                     {/*<div className={css['product-card-rating']}>*/}
                     {/*    <ProductRating rating={product.rating} reviews={product.reviews.length}></ProductRating>*/}
@@ -40,7 +40,7 @@ function ProductCard ({product}) {
                     {/*    </div>*/}
                     {/*</div>*/}
 
-                    <p className={css['product-card-description']}>{product.description}</p>
+                    {/*<p className={css['product-card-description']}>{product.name}</p>*/}
 
                     {/*<div className={css['product-card-tags']}>*/}
                     {/*    <Tag text={product.transmission}><Transmission/></Tag>*/}
@@ -49,7 +49,8 @@ function ProductCard ({product}) {
                     {/*    {product.AC && <Tag text='AC'><Ac/></Tag>}*/}
                     {/*</div>*/}
 
-                    <Link className='btn-primary' to={`/catalog/${product.id}`} state={location}>Детальніше</Link>
+                    {/*<Link className='btn-primary' to={`/catalog/${product.id}`} state={location}>Детальніше</Link>*/}
+                    <Link className='btn-primary' target='_blank' to={product.url}>Детальніше</Link>
                 </div>
             </div>
         </>

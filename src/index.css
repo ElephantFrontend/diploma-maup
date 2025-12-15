@@ -74,17 +74,19 @@ button:focus-visible {
   display: flex;
   align-items: center;
   width: fit-content;
-  background-color: #E44848;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #1a1a1a;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  border: 1px solid #1a1a1a;
   border-radius: 100px;
   padding: 16px 56px;
+  transition: .3s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #D84343;
+  background-color: #1a1a1a;
   color: #FFFFFF;
 }
 
